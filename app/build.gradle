@@ -1,6 +1,23 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'kotlin-parcelize'
+    id 'com.google.devtools.ksp' version '1.6.10-1.0.2'
+}
+
+apply from: "${rootProject.projectDir}/dependencies/gradles/main.gradle"
+
+kotlin {
+    sourceSets {
+        debug {
+            kotlin.srcDir("build/generated/ksp/debug/kotlin")
+        }
+        release {
+            kotlin.srcDir("build/generated/ksp/release/kotlin")
+        }
+    }
 }
 
 android {
@@ -49,7 +66,7 @@ dependencies {
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation "androidx.compose.ui:ui:$compose_version"
-    implementation "androidx.compose.material:material:$compose_version"
+    implementation "androidx.compose.material:material:$compose_materail_version"
     implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.4.1'
     implementation 'androidx.activity:activity-compose:1.4.0'
@@ -58,4 +75,35 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
+
+    // OpenCSV
+    implementation openCV.openCV
+
+    // Compose dependencies
+    implementation compose.viewmodel
+    implementation compose.material
+    implementation compose.activity
+    implementation compose.swiperefersh
+
+    // Compose Nav Destinations
+    implementation composeNav.composeDestination
+    ksp composeNav.kspDestination
+
+    //Dagger - Hilt
+    implementation hilt.hilt
+    kapt hilt.hiltKaptCompiler
+    implementation hilt.hiltViewmodel
+    kapt hilt.hiltCompiler
+    implementation hilt.hiltNavigation
+
+    // Retrofit
+    implementation retrofit.retrofit
+    implementation retrofit.moshiConverter
+    implementation retrofit.http3
+    implementation retrofit.interceptor
+
+    // Room
+    implementation room.room
+    kapt room.roomCompiler
+    implementation room.roomExtenstion
 }

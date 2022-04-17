@@ -1,0 +1,4 @@
+ext.url = {
+    buildConfigField "String", "BASE_URL", "\"https://alphavantage.co/\""
+    buildConfigField "String", "API_KEY", "\"YLYSCAZX6U9LYRY0\""
+}

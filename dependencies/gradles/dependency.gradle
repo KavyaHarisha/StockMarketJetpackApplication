@@ -1,0 +1,36 @@
+ext.openCV = [
+        openCV: "com.opencsv:opencsv:${open_cv_version}"
+]
+
+ext.compose = [
+        viewmodel   : "androidx.lifecycle:lifecycle-viewmodel-compose:${view_model_version}",
+        material    : "androidx.compose.material:material-icons-extended:$compose_version",
+        activity    : "androidx.activity:activity-compose:${compose_activity_version}",
+        swiperefersh: "com.google.accompanist:accompanist-swiperefresh:${swipe_refresh_version}"
+]
+
+ext.composeNav = [
+        composeDestination: "io.github.raamcosta.compose-destinations:core:${compose_destination}",
+        kspDestination    : "io.github.raamcosta.compose-destinations:ksp:${compose_destination}"
+]
+
+ext.hilt = [
+        hilt            : "com.google.dagger:hilt-android:${hilt_version}",
+        hiltKaptCompiler: "com.google.dagger:hilt-android-compiler:${hilt_version}",
+        hiltViewmodel   : "androidx.hilt:hilt-lifecycle-viewmodel:${hilt_view_model_version}",
+        hiltCompiler    : "androidx.hilt:hilt-compiler:${hilt_compiler}",
+        hiltNavigation  : "androidx.hilt:hilt-navigation-compose:${hilt_compiler}"
+]
+
+ext.retrofit = [
+        retrofit      : "com.squareup.retrofit2:retrofit:${retrofit_version}",
+        moshiConverter: "com.squareup.retrofit2:converter-moshi:${retrofit_version}",
+        http3         : "com.squareup.okhttp3:okhttp:${https3_version}",
+        interceptor   : "com.squareup.okhttp3:logging-interceptor:${https3_version}"
+]
+
+ext.room = [
+        room          : "androidx.room:room-runtime:${room_version}",
+        roomCompiler  : "androidx.room:room-compiler:${room_version}",
+        roomExtenstion: "androidx.room:room-ktx:${room_version}"
+]

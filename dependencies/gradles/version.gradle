@@ -1,0 +1,30 @@
+ext {
+    //hilt gradle
+    hilt_gradle_version = '2.40.5'
+
+    //Compose
+    compose_version = '1.1.1'
+    compose_materail_version = '1.2.0-alpha07'
+    //open cv
+    open_cv_version = '5.5.2'
+
+    //jet pack compose
+    view_model_version = '2.4.1'
+    compose_activity_version = '1.6.0-alpha01'
+    swipe_refresh_version = '0.24.2-alpha'
+
+    //jet pack compose nav destination
+    compose_destination = '1.1.2-beta'
+
+    //hilt
+    hilt_version = '2.40.5'
+    hilt_view_model_version = '1.0.0-alpha03'
+    hilt_compiler = '1.0.0'
+
+    //retrofit
+    retrofit_version = '2.9.0'
+    https3_version = '5.0.0-alpha.3'
+
+    //room
+    room_version = '2.4.2'
+}
