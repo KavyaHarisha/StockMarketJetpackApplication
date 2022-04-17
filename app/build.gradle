@@ -34,6 +34,7 @@ android {
         vectorDrawables {
             useSupportLibrary true
         }
+        with url
     }
 
     buildTypes {
